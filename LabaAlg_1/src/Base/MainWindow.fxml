@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="288.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Base.MWController">
+   <children>
+      <ImageView fitHeight="290.0" fitWidth="274.0" layoutX="449.0">
+         <image>
+            <Image url="@Resourse/Wall2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="290.0" fitWidth="449.0">
+         <image>
+            <Image url="@Resourse/Wall.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="Download" layoutX="470.0" layoutY="14.0" mnemonicParsing="false" onAction="#Download" prefHeight="58.0" prefWidth="243.0" stylesheets="@Resourse/Button.css" text="Загрузка">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="CodeHuff" layoutX="470.0" layoutY="98.0" mnemonicParsing="false" onAction="#CodeHuff" prefHeight="58.0" prefWidth="116.0" stylesheets="@Resourse/Button.css" text="Кодирование">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Label layoutX="23.0" layoutY="246.0" prefHeight="20.0" prefWidth="116.0" text="Загрузка файлов">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Button fx:id="DecodeHuff" layoutX="470.0" layoutY="187.0" mnemonicParsing="false" onAction="#DecodeHuff" prefHeight="58.0" prefWidth="116.0" stylesheets="@Resourse/Button.css" text="Декодирование">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <ListView fx:id="ListView" layoutX="23.0" layoutY="14.0" prefHeight="226.0" prefWidth="116.0" />
+      <TextArea fx:id="CodeList" layoutX="158.0" layoutY="14.0" prefHeight="226.0" prefWidth="274.0" />
+      <Label layoutX="242.0" layoutY="246.0" prefHeight="20.0" prefWidth="105.0" text="Коды к файлу">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="CodeLZW" layoutX="600.0" layoutY="98.0" mnemonicParsing="false" onAction="#CodeLZW" prefHeight="58.0" prefWidth="116.0" stylesheets="@Resourse/Button.css" text="Кодирование">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="DecodeLZW" layoutX="600.0" layoutY="187.0" mnemonicParsing="false" onAction="#DecodeLZW" prefHeight="58.0" prefWidth="116.0" stylesheets="@Resourse/Button.css" text="Декодирование">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="492.0" layoutY="256.0" prefHeight="20.0" prefWidth="70.0" text="Хаффман">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="642.0" layoutY="256.0" prefHeight="20.0" prefWidth="31.0" text="LZW">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
