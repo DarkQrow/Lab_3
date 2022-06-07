@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LogWindowController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@../5274745-code-background.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="168.0" layoutY="29.0" stroke="BLACK" strokeType="INSIDE" width="272.0" />
+      <Label layoutX="260.0" layoutY="43.0" text="Вход" textFill="#4bc439">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="47.0" layoutX="30.0" layoutY="187.0" stroke="BLACK" strokeType="INSIDE" width="344.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="47.0" layoutX="30.0" layoutY="132.0" stroke="BLACK" strokeType="INSIDE" width="344.0" />
+      <Label layoutX="38.0" layoutY="132.0" prefHeight="47.0" prefWidth="333.0" text="Выберите пользователя:" textFill="#3ab433">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="Frase" layoutX="40.0" layoutY="193.0" prefHeight="31.0" prefWidth="326.0" text="Фраза" textFill="#41ae3d">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="Start" layoutX="397.0" layoutY="283.0" mnemonicParsing="false" onAction="#StartButton" prefHeight="55.0" prefWidth="85.0" style="-fx-background-color: BLACK;" text="Старт" textFill="#0bdc16">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="Ready" layoutX="492.0" layoutY="283.0" mnemonicParsing="false" onAction="#ReadyButton" prefHeight="55.0" prefWidth="85.0" style="-fx-background-color: BLACK;" text="Готово" textFill="#0bdc16">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="UserChoice" layoutX="407.0" layoutY="136.0" onAction="#getUser" prefHeight="31.0" prefWidth="174.0" style="-fx-background-color: BLACK;" />
+      <TextField fx:id="Text" disable="true" layoutX="30.0" layoutY="258.0" onAction="#TextPrint" prefHeight="99.0" prefWidth="344.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="85.0" layoutX="405.0" layoutY="187.0" stroke="BLACK" strokeType="INSIDE" width="174.0" />
+      <Label fx:id="Complete" layoutX="423.0" layoutY="188.0" prefHeight="75.0" prefWidth="138.0" text="Вход &#10;выполнен &#10;успешно." textFill="#41ae3d" visible="false">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="Error" layoutX="423.0" layoutY="188.0" prefHeight="75.0" prefWidth="138.0" text="Ошибка входа" textFill="#d90000" visible="false">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="Back" layoutX="397.0" layoutY="348.0" mnemonicParsing="false" onAction="#BackButton" prefHeight="38.0" prefWidth="184.0" style="-fx-background-color: BLACK;" text="Вернуться" textFill="#0bdc16">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="525.0" prefWidth="599.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainController">
+   <children>
+      <ImageView fitHeight="525.0" fitWidth="599.0">
+         <image>
+            <Image url="@../Materials/BackGr.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="75.0" layoutX="31.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="538.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="42.0" layoutX="30.0" layoutY="93.0" stroke="BLACK" strokeType="INSIDE" width="538.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="42.0" layoutX="30.0" layoutY="189.0" stroke="BLACK" strokeType="INSIDE" width="538.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="42.0" layoutX="31.0" layoutY="237.0" stroke="BLACK" strokeType="INSIDE" width="538.0" />
+      <Button layoutX="38.0" layoutY="458.0" mnemonicParsing="false" onAction="#showStartGraph" prefHeight="42.0" prefWidth="127.0" stylesheets="@../Materials/buton.css" text="Изначальный&#10;граф" textAlignment="CENTER" />
+      <Button layoutX="234.0" layoutY="458.0" mnemonicParsing="false" onAction="#showRedGraph" prefHeight="42.0" prefWidth="127.0" stylesheets="@../Materials/buton.css" text="Жадный&#10;алгоритм" textAlignment="CENTER" />
+      <Button layoutX="434.0" layoutY="458.0" mnemonicParsing="false" onAction="#showBlueGraph" prefHeight="42.0" prefWidth="127.0" stylesheets="@../Materials/buton.css" text="Путь&#10;Голдберга" textAlignment="CENTER" />
+      <Button layoutX="234.0" layoutY="390.0" mnemonicParsing="false" onAction="#BuildDataToGraph" prefHeight="42.0" prefWidth="127.0" stylesheets="@../Materials/buton.css" text="Построить">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></Button>
+      <Label layoutX="57.0" layoutY="21.0" prefHeight="42.0" prefWidth="485.0" text="Лабораторная работа №7" textAlignment="CENTER" textFill="#387228">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font></Label>
+      <Label layoutX="40.0" layoutY="97.0" prefHeight="30.0" prefWidth="278.0" text="Количество вершин(n): " textFill="#387228">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="193.0" prefHeight="35.0" prefWidth="197.0" text="Радиус весов T1:" textFill="#387228">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="366.0" layoutY="193.0" prefHeight="35.0" prefWidth="37.0" text="T2:" textFill="#387228">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="241.0" prefHeight="35.0" prefWidth="278.0" text="Начальный город(Start):" textFill="#387228">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Ntext" layoutX="310.0" layoutY="102.0" prefHeight="25.0" prefWidth="245.0" />
+      <TextField fx:id="T1Text" layoutX="236.0" layoutY="198.0" prefHeight="25.0" prefWidth="118.0" />
+      <TextField fx:id="T2Text" layoutX="409.0" layoutY="198.0" prefHeight="25.0" prefWidth="127.0" />
+      <TextField fx:id="StartText" layoutX="310.0" layoutY="246.0" prefHeight="25.0" prefWidth="245.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="42.0" layoutX="30.0" layoutY="141.0" stroke="BLACK" strokeType="INSIDE" width="538.0" />
+      <Label layoutX="38.0" layoutY="145.0" prefHeight="35.0" prefWidth="278.0" text="Количество особей(m):" textFill="#387228">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="mText" layoutX="309.0" layoutY="150.0" prefHeight="25.0" prefWidth="245.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="42.0" layoutX="32.0" layoutY="338.0" stroke="BLACK" strokeType="INSIDE" width="538.0" />
+      <Label layoutX="40.0" layoutY="342.0" prefHeight="35.0" prefWidth="278.0" text="Условие окончания(k):" textFill="#387228">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="kText" layoutX="311.0" layoutY="347.0" prefHeight="25.0" prefWidth="245.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="42.0" layoutX="32.0" layoutY="287.0" stroke="BLACK" strokeType="INSIDE" width="538.0" />
+      <Label layoutX="42.0" layoutY="291.0" prefHeight="35.0" prefWidth="197.0" text="Вероятности   К:" textFill="#387228">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="368.0" layoutY="291.0" prefHeight="35.0" prefWidth="37.0" text="М:" textFill="#387228">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="PkText" layoutX="238.0" layoutY="296.0" prefHeight="25.0" prefWidth="118.0" />
+      <TextField fx:id="PmText" layoutX="411.0" layoutY="296.0" prefHeight="25.0" prefWidth="127.0" />
+   </children>
+</AnchorPane>

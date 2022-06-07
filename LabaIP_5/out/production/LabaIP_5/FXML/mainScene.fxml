@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Main">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@../5274745-code-background.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="LogButton" layoutX="365.0" layoutY="300.0" mnemonicParsing="false" onAction="#LogWindow" prefHeight="55.0" prefWidth="162.0" style="-fx-background-color: BLACK;" text="Вход" textFill="#2e8618">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="218.0" layoutX="72.0" layoutY="36.0" stroke="BLACK" strokeType="INSIDE" width="456.0" />
+      <Label layoutX="142.0" layoutY="56.0" prefHeight="190.0" prefWidth="316.0" text="Добро пожаловать &#10;в Лабораторную работу №3&#10;&quot;Клавиатурный почерк&quot;&#10;Выберите опцию" textAlignment="CENTER" textFill="#0e9100" wrapText="true">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="RegButton" layoutX="72.0" layoutY="300.0" mnemonicParsing="false" onAction="#RegWindow" prefHeight="55.0" prefWidth="162.0" style="-fx-background-color: BLACK;" text="Регистрация" textFill="#2e8618">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

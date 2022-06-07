@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="BigBro" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LogWindowController">
+    <children>
+        <ImageView fitHeight="400.0" fitWidth="600.0">
+            <image>
+                <Image url="@../LabaIPWallpaper.jpg" />
+            </image>
+        </ImageView>
+        <Button fx:id="Back" disable="true" layoutX="492.0" layoutY="319.0" mnemonicParsing="false" onAction="#BackButton" prefHeight="55.0" prefWidth="77.0" style="-fx-background-color: BLACK;" text="End" textFill="#00708f">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Button>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="61.0" layoutX="394.0" layoutY="18.0" stroke="BLACK" strokeType="INSIDE" width="192.0" />
+        <Label layoutX="453.0" layoutY="18.0" prefHeight="40.0" prefWidth="77.0" text="Вход" textFill="#00708f">
+            <font>
+                <Font name="System Bold" size="28.0" />
+            </font>
+        </Label>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="115.0" layoutX="393.0" layoutY="195.0" stroke="BLACK" strokeType="INSIDE" width="192.0" />
+        <Label fx:id="Good" layoutX="407.0" layoutY="195.0" prefHeight="115.0" prefWidth="174.0" text="Вы вошли в систему&#10; успешно,&#10; поздравляю" textAlignment="CENTER" textFill="#00708f" visible="false">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="82.0" layoutX="394.0" layoutY="93.0" stroke="BLACK" strokeType="INSIDE" width="192.0" />
+      <Pane fx:id="LinePane" layoutX="16.0" layoutY="18.0" prefHeight="363.0" prefWidth="363.0" />
+        <Label layoutX="417.0" layoutY="96.0" prefHeight="28.0" prefWidth="144.0" text="Имя пользователя:" textAlignment="CENTER" textFill="#00708f">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Pane fx:id="PasswordField" disable="true" layoutX="16.0" layoutY="18.0" prefHeight="363.0" prefWidth="363.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" height="363.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="363.0" />
+                <Circle fx:id="Circle1_1" fill="DODGERBLUE" layoutX="63.0" layoutY="296.0" onMouseClicked="#PasswordEnter" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                <Circle fx:id="Circle1_2" fill="DODGERBLUE" layoutX="184.0" layoutY="289.0" onMouseClicked="#PasswordEnter" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                <Circle fx:id="Circle1_3" fill="DODGERBLUE" layoutX="292.0" layoutY="289.0" onMouseClicked="#PasswordEnter" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                <Circle fx:id="Circle2_1" fill="DODGERBLUE" layoutX="184.0" layoutY="178.0" onMouseClicked="#PasswordEnter" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                <Circle fx:id="Circle2_2" fill="DODGERBLUE" layoutX="292.0" layoutY="178.0" onMouseClicked="#PasswordEnter" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                <Circle fx:id="Circle2_3" fill="DODGERBLUE" layoutX="63.0" layoutY="178.0" onMouseClicked="#PasswordEnter" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                <Circle fx:id="Circle3_1" fill="DODGERBLUE" layoutX="292.0" layoutY="65.0" onMouseClicked="#PasswordEnter" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                <Circle fx:id="Circle3_2" fill="DODGERBLUE" layoutX="184.0" layoutY="65.0" onMouseClicked="#PasswordEnter" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                <Circle fx:id="Circle3_3" fill="DODGERBLUE" layoutX="63.0" layoutY="65.0" onMouseClicked="#PasswordEnter" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+            </children>
+        </Pane>
+      <Label fx:id="Bad" layoutX="404.0" layoutY="197.0" prefHeight="115.0" prefWidth="174.0" text="Вы где то ошиблись&#10;попробуйте выйти&#10;и зайти нормально" textAlignment="CENTER" textFill="#00708f" visible="false">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="UserChoice" layoutX="413.0" layoutY="129.0" onAction="#getUser" prefWidth="150.0" />
+      <Button fx:id="Ready" disable="true" layoutX="394.0" layoutY="319.0" mnemonicParsing="false" onAction="#ReadyButton" prefHeight="55.0" prefWidth="83.0" style="-fx-background-color: BLACK;" text="Ready" textFill="#00708f">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Pane fx:id="VeryBadPane" layoutX="5.0" layoutY="75.0" prefHeight="253.0" prefWidth="591.0" visible="false">
+         <children>
+            <Rectangle fx:id="VeryBad" arcHeight="5.0" arcWidth="5.0" disable="true" height="200.0" layoutX="36.0" layoutY="27.0" stroke="#005fff" strokeType="INSIDE" strokeWidth="9.0" width="519.0" />
+            <Label fx:id="VeryBadText" disable="true" layoutX="101.0" layoutY="26.0" prefHeight="200.0" prefWidth="483.0" text="Пожалуйста подождите, вы ввели&#10;пароль три раза неправильно. &#10;Через некотрое время &#10;попробуйте повторно." textAlignment="CENTER" textFill="#42a7ff">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
