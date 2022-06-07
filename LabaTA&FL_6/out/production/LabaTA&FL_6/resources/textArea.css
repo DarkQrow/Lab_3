@@ -1,0 +1,9 @@
+.text-area {
+  -fx-highlight-fill: #ffffff;
+  -fx-highlight-text-fill: #005fff;
+  -fx-text-fill: #ff8b32;
+
+}
+.text-area .content{
+-fx-background-color: #000000;
+}
